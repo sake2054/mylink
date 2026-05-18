@@ -1,7 +1,8 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
+
 import * as React from "react";
-import Image from "next/image";
 import NextLink from "next/link";
 import {
   BarChart3,
@@ -313,11 +314,9 @@ export function MyPageClient({
             <CardContent className="space-y-4">
               <div className="flex flex-wrap items-center gap-4">
                 {optimisticProfile.image ? (
-                  <Image
+                  <img
                     src={optimisticProfile.image}
                     alt=""
-                    width={96}
-                    height={96}
                     className="h-24 w-24 rounded-full border-2 border-black object-cover shadow-brutal-sm"
                   />
                 ) : (

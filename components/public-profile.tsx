@@ -1,4 +1,5 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+
 import { ExternalLink, Link2 } from "lucide-react";
 
 import { StaticLogo } from "@/components/logo";
@@ -35,11 +36,9 @@ export function PublicProfile({ user }: { user: PublicProfileUser }) {
           <CardContent className="p-6">
             <div className="flex flex-col items-center text-center">
               {user.image ? (
-                <Image
+                <img
                   src={user.image}
                   alt=""
-                  width={96}
-                  height={96}
                   className="h-24 w-24 rounded-full border-2 border-black object-cover shadow-brutal-sm"
                 />
               ) : (
